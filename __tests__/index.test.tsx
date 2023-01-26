@@ -10,11 +10,5 @@ describe('Home', () => {
     });
 
     expect(heading).toBeInTheDocument();
-
-    // const title = screen.getByRole('heading', {
-    //   name: /welcome/i,
-    // });
-
-    // expect(title).toBeInTheDocument();
   });
 });
