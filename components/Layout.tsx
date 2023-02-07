@@ -7,7 +7,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div className={styles.container}>
       <Sidebar />
-      <main>{children}</main>
+      <div className={styles.children}>{children}</div>
     </div>
   );
 };
