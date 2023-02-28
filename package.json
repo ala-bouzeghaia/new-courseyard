@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format:check": "prettier --check --ignore-path .gitignore .",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --collect-coverage"
