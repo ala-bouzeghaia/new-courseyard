@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+
+.chapters-container {
+  width: 25%;
+  background-color: $color_white_transparent;
+  color: $color_green;
+  overflow-y: auto;
+}
+
+.chapters-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.chapters-section-title {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+  p {
+    width: 90%;
+    margin: 0;
+    padding: 0 0 10px 5px;
+    font-weight: 600;
+  }
+  span {
+    width: 90%;
+    height: 16px;
+    border-radius: 10px;
+    background-color: $color_light_green;
+    span {
+      border-radius: 0px;
+      background-color: $color_yellow;
+    }
+  }
+}

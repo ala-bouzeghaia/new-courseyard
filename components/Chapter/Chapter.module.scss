@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+
+.chapter-container {
+  &:hover {
+    cursor: pointer;
+    background-color: $color_pale_green_transparent;
+  }
+}
+.chapter-content {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  width: 70%;
+  margin: 0 auto;
+  span {
+    padding: 10px;
+    h4 {
+      margin: 0;
+    }
+    p {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      svg {
+        margin: 2px 5px 0 0;
+      }
+    }
+  }
+}
+
+.chapter-progress {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  margin-right: 10px;
+  svg {
+    position: absolute;
+  }
+
+  span {
+    padding: 0;
+    color: $color_dark_green;
+  }
+}
+.player-icon-locked {
+  left: calc(50% - 15px);
+}
