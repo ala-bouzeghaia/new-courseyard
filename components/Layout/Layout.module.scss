@@ -1,0 +1,9 @@
+@import '../../styles/variables';
+
+.container {
+  display: flex;
+}
+.children {
+  background: linear-gradient(to right, $color_light_green, $color_pale_green);
+  color: $color_white;
+}
