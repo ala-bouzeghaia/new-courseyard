@@ -1,0 +1,23 @@
+{
+  "title": "React JS Crash Course",
+  "chapters": [
+    {
+      "duration": 757,
+      "id": "182ea3a6-3c78-4f2b-adfb-5cfb86b0aade",
+      "isCompleted": false,
+      "progression": 0,
+      "status": "locked",
+      "timeStart": "0:00",
+      "title": "Intro & Slides"
+    },
+    {
+      "duration": 135,
+      "id": "d950bae7-321e-4ed1-932d-41f7190849a8",
+      "isCompleted": false,
+      "progression": 0,
+      "status": "locked",
+      "timeStart": "12:37",
+      "title": "Create a React app"
+    }
+  ]
+}
