@@ -3,7 +3,7 @@ import { HiPlay, HiPause, HiLockClosed, HiOutlineClock, HiCheckCircle } from 're
 import CircularProgress from '@mui/material/CircularProgress';
 import styles from './Chapter.module.scss';
 import { ChapterType } from '../../types/chapter';
-import { convertTimecodeToSeconds, formatTime } from '../../utils/helpers';
+import { convertTimecodeToSeconds, convertSecondsToTimecode } from '../../utils/helpers';
 
 type Props = {
   chapter: ChapterType;
@@ -102,7 +102,7 @@ const Chapter = (props: Props) => {
             {props.chapter.timeStart} {props.chapter.title}
           </h4>
           <p>
-            <HiOutlineClock /> {formatTime(props.chapter.duration)}
+            <HiOutlineClock /> {convertSecondsToTimecode(props.chapter.duration)}
           </p>
         </span>
       </div>

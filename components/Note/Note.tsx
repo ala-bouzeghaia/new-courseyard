@@ -2,7 +2,7 @@ import YouTube from 'react-youtube';
 import { HiOutlinePencil, HiOutlineTrash, HiOutlineCheckCircle } from 'react-icons/hi';
 import styles from './Note.module.scss';
 import { NoteType } from '../../types/note';
-import { formatTime } from '../../utils/helpers';
+import { convertSecondsToTimecode } from '../../utils/helpers';
 
 type Props = {
   note: NoteType;
@@ -23,7 +23,7 @@ const Note = (props: Props) => {
         onClick={() => {
           props.playerRef.current.internalPlayer.seekTo(props.note.timecode);
         }}>
-        {formatTime(props.note.timecode)}
+        {convertSecondsToTimecode(props.note.timecode)}
       </p>
       <p>{props.note.content}</p>
       <div>
