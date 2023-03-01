@@ -66,10 +66,40 @@ export const convertTimecodeToSeconds = (timecode: string) => {
  * @param time
  * @returns Time converted into timestamp
  */
-export const formatTime = (time: number): string => {
+export const convertSecondsToTimecode = (time: number): string => {
   const formatedTime = new Date(time * 1000).toISOString().split('T')[1].split('.')[0];
   if (time < 3600) {
     return formatedTime.substring(3);
   }
   return formatedTime;
+};
+
+/**
+ * Reformat string time into timestamp
+ * @param duration
+ * @returns Time converted into timestamp
+ * @example "PT1H48M48S" becomes "01:48:48"
+ */
+export const formatDurationToTimecode = (duration: string): string => {
+  const hoursSplit: string[] = duration.split('PT')[1].split('H');
+  const hours: string =
+    hoursSplit.length === 2
+      ? hoursSplit[0].length === 1
+        ? '0' + hoursSplit[0]
+        : hoursSplit[0]
+      : '';
+
+  const minutesSplit: string[] =
+    hoursSplit.length === 2 ? hoursSplit[1].split('M') : hoursSplit[0].split('M');
+  const minutes: string = minutesSplit[0].length === 1 ? '0' + minutesSplit[0] : minutesSplit[0];
+
+  const secondsSplit: string[] = minutesSplit[1].split('S');
+  const seconds: string =
+    secondsSplit[0] === ''
+      ? '00'
+      : secondsSplit[0].length === 1
+      ? '0' + secondsSplit[0]
+      : secondsSplit[0];
+
+  return hours.length !== 0 ? `${hours}:${minutes}:${seconds}` : `${minutes}:${seconds}`;
 };
