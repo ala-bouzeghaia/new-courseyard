@@ -7,11 +7,10 @@
   overflow-y: auto;
 }
 
-.chapters-list {
+.chapters-section-list {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-height: 100vh;
+  width: fit-content;
 }
 
 .chapters-section-title {
