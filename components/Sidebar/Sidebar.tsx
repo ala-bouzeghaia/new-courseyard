@@ -15,7 +15,6 @@ function Sidebar() {
   const handleSidebar = () => {
     if (window.innerWidth <= 768) {
       setIsSidebarOpen(!isSidebarOpen);
-      console.log('clicked');
     }
   };
 
