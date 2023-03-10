@@ -1,7 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-// import YouTube from 'react-youtube';
 import { v4 as uuidv4 } from 'uuid';
 import { ChapterType } from '../types/chapter';
 import {
@@ -79,8 +78,7 @@ export const useVideoData = (videoId: string) => {
   };
 
   const { data } = useYoutubeVideoData(videoId);
-  // console.log(data);
-  // let duration: number
+
   const duration = data ? convertTimecodeToSeconds(formatDurationToTimecode(data.duration)) : 0;
 
   useEffect(() => {
@@ -89,14 +87,6 @@ export const useVideoData = (videoId: string) => {
     };
 
     if (videoId.length !== 0 && data) {
-      // const duration = convertTimecodeToSeconds(formatDurationToTimecode(data.duration));
-      // playerRef.current.internalPlayer?.getDuration().then((duration: number) => {
-      // console.log(
-      //   'durrr',
-      //   duration,
-      //   data && convertTimecodeToSeconds(formatDurationToTimecode(data.duration)),
-      // );
-
       getDataFromDescription(data.description).map((elt, idx, arr) => {
         const timeStart: string = getTimeFromDescription(elt);
         const title: string = getTitleFromDescription(elt);
@@ -116,7 +106,6 @@ export const useVideoData = (videoId: string) => {
           },
         ]);
       });
-      // });
     }
   }, [data, videoId, duration]);
 
