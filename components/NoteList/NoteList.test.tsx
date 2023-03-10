@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import YouTube from 'react-youtube';
 import NoteList from './NoteList';
 import mockDataNotes from '../../__tests__/mockDataNotes.json';
-import { formatTime } from '../../utils/helpers';
+import { convertSecondsToTimecode } from '../../utils/helpers';
 
 describe('NoteList', () => {
   beforeAll(() => {
@@ -61,7 +61,7 @@ describe('NoteList', () => {
     );
 
     mockNoteList.forEach((mockNote) => {
-      const noteTimecode = screen.getByText(formatTime(mockNote.timecode));
+      const noteTimecode = screen.getByText(convertSecondsToTimecode(mockNote.timecode));
       expect(noteTimecode).toBeInTheDocument();
 
       const noteContent = screen.getByText(mockNote.content);
