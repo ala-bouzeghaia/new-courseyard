@@ -2,8 +2,8 @@
 
 .notes-container {
   height: 25%;
+  margin: 0 40px 20px 40px;
   overflow-y: auto;
-  margin: 0 40px;
   padding: 10px;
   color: $color_dark_green;
   background-color: $color_light_pale_green;
@@ -17,15 +17,16 @@
   }
   p {
     display: flex;
+    margin: 0 0 10px 0;
+    cursor: pointer;
     span {
       font-weight: bold;
     }
     svg {
       margin-right: 10px;
     }
-    &:hover {
-      cursor: pointer;
-    }
+    // &:hover {
+    // }
   }
   textarea {
     // margin: 0 auto;
